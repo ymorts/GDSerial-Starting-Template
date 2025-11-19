@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://djdm8puccvghe"]
+
+[ext_resource type="Script" uid="uid://0y2yimy2ias0" path="res://Scripts/get_serial.gd" id="1_602y3"]
+
+[node name="GetSerial" type="Node2D"]
+script = ExtResource("1_602y3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
